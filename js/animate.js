@@ -38,7 +38,7 @@ $(function(){
 			if(selected == answer)
 			{
 				$('li.selected').addClass('success').removeClass('selected');
-				$('#submiterrors').html('');
+				$('#submiterrors').html('Risposta esatta.');
 				y++;
 				result = y * 100 / count;
 				$('.meter span').css('width', + result + '%');
@@ -46,7 +46,7 @@ $(function(){
 			else
 			{
 				$('li.selected').addClass('error').removeClass('selected');
-				$('#submiterrors').html('Answer : ' + answer);
+				$('#submiterrors').html('La risposta corretta &egrave; : ' + answer);
 			}
 			$(this).hide();
 			if(x == count)
@@ -60,7 +60,7 @@ $(function(){
 		}
 		else
 		{
-			$('#submiterrors').html('Select an option to continue');
+			$('#submiterrors').html('Scegliere un opzione per proseguire');
 		}
 		
 		
@@ -81,13 +81,13 @@ $(function(){
 		
 		if(marks < 50)
 		{
-			var comment = 'Pas très impressionnant';
+			var comment = 'Prestazione deludente. Puoi fare meglio!';
 		}
 		else
 		{
-			var comment = "C'est impressionnant";
+			var comment = "Ottima prestazione. Bene cos&igrave;";
 		}
-		$('h2#score').html(comment + ', you scored ' + marks + '% Marks');
+		$('h2#score').html(comment + ', hai risposto correttamente al ' + marks + '% delle domande');
 		$('.initialcount').html('Finished');
 	});
 	

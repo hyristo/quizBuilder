@@ -42,7 +42,7 @@ $(function(){
 			}
 		else
 		{
-			alert('Select a quiz to continue');
+			alert('Scegliere un argomento per continuare');
 		}
 	});
 });

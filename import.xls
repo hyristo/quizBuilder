@@ -1,0 +1,135 @@
+<?xml version="1.0"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+ <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <Version>14.0</Version>
+ </DocumentProperties>
+ <OfficeDocumentSettings xmlns="urn:schemas-microsoft-com:office:office">
+  <AllowPNG/>
+ </OfficeDocumentSettings>
+ <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
+  <WindowHeight>8100</WindowHeight>
+  <WindowWidth>23580</WindowWidth>
+  <WindowTopX>120</WindowTopX>
+  <WindowTopY>140</WindowTopY>
+  <ActiveSheet>1</ActiveSheet>
+  <ProtectStructure>False</ProtectStructure>
+  <ProtectWindows>False</ProtectWindows>
+ </ExcelWorkbook>
+ <Styles>
+  <Style ss:ID="Default" ss:Name="Normal">
+   <Alignment ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="12" ss:Color="#000000"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+ </Styles>
+ <Worksheet ss:Name="Table1">
+  <Table ss:ExpandedColumnCount="12" ss:ExpandedRowCount="3" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultColumnWidth="65" ss:DefaultRowHeight="15">
+   <Column ss:Index="2" ss:AutoFitWidth="0" ss:Width="110" ss:Span="5"/>
+   <Column ss:Index="9" ss:AutoFitWidth="0" ss:Width="110" ss:Span="3"/>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">id</Data></Cell>
+    <Cell><Data ss:Type="String">question</Data></Cell>
+    <Cell><Data ss:Type="String">option1</Data></Cell>
+    <Cell><Data ss:Type="String">option2</Data></Cell>
+    <Cell><Data ss:Type="String">option3</Data></Cell>
+    <Cell><Data ss:Type="String">option4</Data></Cell>
+    <Cell><Data ss:Type="String">answer</Data></Cell>
+    <Cell><Data ss:Type="String">connection_meta</Data></Cell>
+    <Cell><Data ss:Type="String">created_on</Data></Cell>
+    <Cell><Data ss:Type="String">created_by</Data></Cell>
+    <Cell><Data ss:Type="String">status</Data></Cell>
+    <Cell><Data ss:Type="String">option_value</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="String">AAA</Data></Cell>
+    <Cell><Data ss:Type="String">a</Data></Cell>
+    <Cell><Data ss:Type="String">b</Data></Cell>
+    <Cell><Data ss:Type="String">c</Data></Cell>
+    <Cell><Data ss:Type="String">d</Data></Cell>
+    <Cell><Data ss:Type="String">b</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="String">2012-09-22 11:47:18</Data></Cell>
+    <Cell><Data ss:Type="String">admin</Data></Cell>
+    <Cell><Data ss:Type="String">published</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">3</Data></Cell>
+    <Cell><Data ss:Type="String">In che forma appare lo Spirito Santo al Giordano?</Data></Cell>
+    <Cell><Data ss:Type="String">Aquila</Data></Cell>
+    <Cell><Data ss:Type="String">Farfalla</Data></Cell>
+    <Cell><Data ss:Type="String">Colomba</Data></Cell>
+    <Cell><Data ss:Type="String">Luce abbagliante</Data></Cell>
+    <Cell><Data ss:Type="String">Colomba</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="String">2012-09-22 12:36:38</Data></Cell>
+    <Cell><Data ss:Type="String">admin</Data></Cell>
+    <Cell><Data ss:Type="String">published</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <Unsynced/>
+   <PageLayoutZoom>0</PageLayoutZoom>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+ <Worksheet ss:Name="Foglio2">
+  <Table ss:ExpandedColumnCount="7" ss:ExpandedRowCount="3" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultColumnWidth="65" ss:DefaultRowHeight="15">
+   <Column ss:Index="2" ss:AutoFitWidth="0" ss:Width="220"/>
+   <Column ss:Index="7" ss:AutoFitWidth="0" ss:Width="109"/>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">n°</Data></Cell>
+    <Cell><Data ss:Type="String">Domanda</Data></Cell>
+    <Cell><Data ss:Type="String">Risposta1</Data></Cell>
+    <Cell><Data ss:Type="String">Risposta2</Data></Cell>
+    <Cell><Data ss:Type="String">Risposta3</Data></Cell>
+    <Cell><Data ss:Type="String">Risposta4</Data></Cell>
+    <Cell><Data ss:Type="String">Risposta Esatta</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="String">Quale colore è nella bandiera del Vaticano</Data></Cell>
+    <Cell><Data ss:Type="String">Verde</Data></Cell>
+    <Cell><Data ss:Type="String">Rosso</Data></Cell>
+    <Cell><Data ss:Type="String">Blue</Data></Cell>
+    <Cell><Data ss:Type="String">Bianco</Data></Cell>
+    <Cell><Data ss:Type="Number">4</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">2</Data></Cell>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <Unsynced/>
+   <Print>
+    <ValidPrinterInfo/>
+    <PaperSizeIndex>9</PaperSizeIndex>
+    <HorizontalResolution>-4</HorizontalResolution>
+    <VerticalResolution>-4</VerticalResolution>
+   </Print>
+   <PageLayoutZoom>0</PageLayoutZoom>
+   <Selected/>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <ActiveRow>3</ActiveRow>
+     <ActiveCol>1</ActiveCol>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+</Workbook>

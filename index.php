@@ -1,7 +1,7 @@
 <?php if(file_exists('config.php')){ include_once( 'config.php' );}else{header("location: install.php");} ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html>
-    <head>
+    <head> 
         <title>UI Elements: jQuery Popout Menu</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
         <meta name="description" content="UI Elements: jQuery Popout Menu" />
@@ -84,28 +84,28 @@
         </style>
     </head>
     <body>
-<?php session_start(); if(isset($_SESSION['username'])) { ?>
+<?php /* session_start(); if(isset($_SESSION['username'])) { ?>
 <div id="ifloggedin">
     <a href="admin/index.php">Admin Area</a>
 </div><!-- end iflogged in -->
-<?php } ?>
+<?php }*/ ?>
         <div class="content">
-            <h1>Quiz Engine</h1>
+            <h1 style="z-index: -1">Euntes <br/>Docete 2.0</h1>
           
           <div class="col-full">
             <div id="fake"> </div>
              <span class="initialcount"></span>
             <div class="start">
-                <h2>jQuery Quiz </h2>
+                <h2>Euntes Docete 2.0</h2>
                 <div id="ui_element" class="m_wrapper">
                     <ul>
                     <?php include_once 'scripts/get-quiz.php' ;?>
                     </ul>
-                       <div class="m_itemMain m_up">Select Quiz</div><!-- class m -->
+                       <div class="m_itemMain m_up">Scegli l'argomento</div><!-- class m -->
                        </div><!-- id ui-element -->  
                        
                        <div class="quizstartdiv">
-                           <input type="submit" name="startquiz" value="Start Quiz" id="startquiz"/>
+                           <input type="submit" name="startquiz" value="Inizia" id="startquiz"/>
                        </div>
 
               
@@ -117,7 +117,8 @@
 
             <div class="finished" id="finished">
                 <h2 id="score"></h2>
-                    <div class="quizenddiv">
+                <?/*    
+                <div class="quizenddiv">
                         <a href="http://www.facebook.com/sharer.php?u=<?php echo FACEBOOK_LINK; ?>&t=<?php echo FACEBOOK_QUERY; ?>">
                         <img src="images/Untitled.png" /></a>
                      </div>
@@ -126,6 +127,8 @@
                          <input id="endquiz" type="submit" value="Try Again" name="endquiz">
                      </div>
                      <script src="http://static.ak.fbcdn.net/connect.php/js/FB.Share" type="text/javascript"></script>
+                 * 
+                 */?>
             </div><!-- end finished -->
             
             
@@ -133,9 +136,9 @@
              <div id="submiterrors"></div>
              
             <div id="navigation">
-               <span id="submit">Submit</span>
-               <span id="next">Next &#8250;</span>
-                <span id="finish">Finish</span>
+               <span id="submit">Conferma</span>
+               <span id="next">Continua &#8250;</span>
+                <span id="finish">Fine</span>
             <div><!-- end navigation -->  
 
 

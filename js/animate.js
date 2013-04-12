@@ -3,7 +3,9 @@ $(function(){
 	// variables for quiz results 
 	
 	var x = 1;
-	var count = $(".box").length;
+	var esatto = 0;
+        var errato = 0;
+        var count = $(".box").length;
 	y = 0;
 	$('.initialcount').html('1 / ' + count);	
 	// animating the li options
@@ -22,7 +24,7 @@ $(function(){
 		$(this).hide();
 		$('#submiterrors').html('');
 		x++;
-		$('.initialcount').html(x + ' / ' + count);	
+		$('.initialcount').html(x + ' / ' + count + ' <br/><img src="images/green.png" align="absmiddle" width="50px" height="50px"/>: '+esatto+ '<br/><img src="images/red.png" align="absmiddle" width="50px" height="50px"/>: '+errato);	
 		$('#submit').show();
 	});
 	
@@ -39,6 +41,7 @@ $(function(){
 			{
 				$('li.selected').addClass('success').removeClass('selected');
 				$('#submiterrors').html('Risposta esatta.');
+                                esatto++;
 				y++;
 				result = y * 100 / count;
 				$('.meter span').css('width', + result + '%');
@@ -47,6 +50,7 @@ $(function(){
 			{
 				$('li.selected').addClass('error').removeClass('selected');
 				$('#submiterrors').html('La risposta corretta &egrave; : ' + answer);
+                                errato++;
 			}
 			$(this).hide();
 			if(x == count)

@@ -2,10 +2,10 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html>
     <head> 
-        <title>UI Elements: jQuery Popout Menu</title>
+        <title>Euntes Docete 2.0</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-        <meta name="description" content="UI Elements: jQuery Popout Menu" />
-        <meta name="keywords" content="jquery, menu, navigation, popout, slide up, slide down "/>
+        <meta name="description" content="Euntes Docete 2.0" />
+        <meta name="keywords" content="jEuntes Docete 2.0"/>
         <!-- The JavaScript -->
         <script type="text/javascript" src="js/jquery.js"></script>
         <script type="text/javascript" src="js/select-quiz.js"></script>       
@@ -84,71 +84,35 @@
         </style>
     </head>
     <body>
-<?php /* session_start(); if(isset($_SESSION['username'])) { ?>
-<div id="ifloggedin">
-    <a href="admin/index.php">Admin Area</a>
-</div><!-- end iflogged in -->
-<?php }*/ ?>
         <div class="content">
-            <h1 style="z-index: -1">Euntes <br/>Docete 2.0</h1>
-          
-          <div class="col-full">
-            <div id="fake"> </div>
-             <span class="initialcount"></span>
-            <div class="start">
-                <h2>Euntes Docete 2.0</h2>
-                <div id="ui_element" class="m_wrapper">
-                    <ul>
-                    <?php include_once 'scripts/get-quiz.php' ;?>
-                    </ul>
-                       <div class="m_itemMain m_up">Scegli l'argomento</div><!-- class m -->
-                       </div><!-- id ui-element -->  
-                       
-                       <div class="quizstartdiv">
-                           <input type="submit" name="startquiz" value="Inizia" id="startquiz"/>
-                       </div>
-
-              
-            </div><!-- end end -->
-            
-            <div id="allquestions">
-             </div><!-- end allquestions -->
-        
-
-            <div class="finished" id="finished">
-                <h2 id="score"></h2>
-                <?/*    
-                <div class="quizenddiv">
-                        <a href="http://www.facebook.com/sharer.php?u=<?php echo FACEBOOK_LINK; ?>&t=<?php echo FACEBOOK_QUERY; ?>">
-                        <img src="images/Untitled.png" /></a>
-                     </div>
-                     
-                     <div id="quizend">
-                         <input id="endquiz" type="submit" value="Try Again" name="endquiz">
-                     </div>
-                     <script src="http://static.ak.fbcdn.net/connect.php/js/FB.Share" type="text/javascript"></script>
-                 * 
-                 */?>
-            </div><!-- end finished -->
-            
-            
-             <div class="meter"><span> </span></div>             
-             <div id="submiterrors"></div>
-             
-            <div id="navigation">
-               <span id="submit">Conferma</span>
-               <span id="next">Continua &#8250;</span>
-                <span id="finish">Fine</span>
-            <div><!-- end navigation -->  
-
-
-
-            
-            
-          </div>  <!-- end col-full -->
+            <h1 style="z-index: -1">Euntes<br/>Docete 2.0</h1>
+            <div class="col-full">
+                <div id="fake"> </div>
+                <span class="initialcount"></span>
+                <div class="start">
+                    <h2>Euntes Docete 2.0</h2>
+                    <div id="ui_element" class="m_wrapper">
+                        <ul>
+                        <?php include_once 'scripts/get-quiz.php' ;?>
+                        </ul>
+                        <div class="m_itemMain m_up">Scegli l'argomento</div><!-- class m -->
+                    </div><!-- id ui-element -->  
+                    <div class="quizstartdiv">
+                        <input type="submit" name="startquiz" value="Inizia" id="startquiz"/>
+                    </div>
+                </div><!-- end end -->
+                <div id="allquestions"></div><!-- end allquestions -->
+                <div class="finished" id="finished">
+                    <h2 id="initialcount"></h2>
+                </div><!-- end finished -->
+                <div class="meter"><span></span></div>             
+                <div id="submiterrors"></div>
+                <div id="navigation">
+                    <span id="submit">Conferma</span>
+                    <span id="next">Continua &#8250;</span>
+                    <span id="finish">Fine</span>
+                </div><!-- end navigation -->  
+            </div>  <!-- end col-full -->
         </div><!-- end ocntent -->
-
-
-        
     </body>
 </html>

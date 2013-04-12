@@ -14,15 +14,15 @@
 			extract($row);
 			echo '<div class="box">
 				 <div id="question">
-					 <h2>'.$question.'</h2>
+					 <h2>'.htmlspecialchars($question).'</h2>
 				 </div>
 				 <ul id="options">
-					  <li class="question">'.$option1.'</li>
-					  <li class="question">'.$option2.'</li>
-					  <li class="question">'.$option3.'</li>
-					  <li class="question">'.$option4.'</li>
+					  <li class="question">'.htmlspecialchars($option1).'</li>
+					  <li class="question">'.htmlspecialchars($option2).'</li>
+					  <li class="question">'.htmlspecialchars($option3).'</li>
+					  <li class="question">'.htmlspecialchars($option4).'</li>
 				 </ul>
-				 <input type="hidden" name="answer" value="'.htmlentities($answer).'" id="answer"/>
+				 <input type="hidden" name="answer" value="'.htmlspecialchars($answer).'" id="answer"/>
 			 </div><!-- end box -->';
 		}
 	}

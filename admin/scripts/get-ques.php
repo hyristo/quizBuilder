@@ -27,8 +27,8 @@
 		{
 			extract($row);
 			echo '<tr>
-				<td><b>Ques:- </b>'.$question.'</td>
-				<td><b>Ans:- </b>'.$answer.'</td>
+				<td><b>Ques:- </b>'.  htmlspecialchars($question).'</td>
+				<td><b>Ans:- </b>'.htmlspecialchars($answer).'</td>
 				<td><span class="ques_edit"><input type="hidden" id="quesid" value="'.$id.'" /><img src="images/doc_edit.png" width="12" height="12" id="indques"/></span>
 				<span class="ques_delete"><input type="hidden" id="hiddendelete" value="'.$id.'" /><img src="images/delete.png" width="12" height="12" id="quesdelete"/></span></td>
 			</tr>';

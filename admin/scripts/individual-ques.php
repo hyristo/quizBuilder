@@ -58,23 +58,23 @@
 					<legend>Edit Question <span class="closepopup"><img src="images/delete.png" width="12" height="12" alt="Close" /></span></legend>
 					<p>
 								  <label for="username">Question</label>
-								  <input id="editquesname" name="questionname" value="'.$question.'"/>
+								  <input id="editquesname" name="questionname" value="'.htmlspecialchars($question).'"/>
 								</p>
 								<p>
 								   <label for="option1">Option 1</label>
-								   <input id="editoption1" name="option1" type="text" value="'.htmlentities($option1).'"/>
+								   <input id="editoption1" name="option1" type="text" value="'.htmlspecialchars($option1).'"/>
 								</p>
 								<p>
 								   <label for="option2">Option 2</label>
-								   <input id="editoption2" name="option2" type="text" value="'.htmlentities($option2).'"/>
+								   <input id="editoption2" name="option2" type="text" value="'.htmlspecialchars($option2).'"/>
 								</p>
 								<p>
 								   <label for="option3">Option 3</label>
-								   <input id="editoption3" name="option3" type="text" value="'.htmlentities($option3).'"/>
+								   <input id="editoption3" name="option3" type="text" value="'.htmlspecialchars($option3).'"/>
 								</p>
 								 <p>
 								   <label for="option1">Option 4</label>
-								   <input id="editoption4" name="option4" type="text" value="'.htmlentities($option4).'"/>
+								   <input id="editoption4" name="option4" type="text" value="'.htmlspecialchars($option4).'"/>
 								</p>
 								<input type="hidden" id="hiddeneditid" value="'.$id.'" />
 							 </fieldset>

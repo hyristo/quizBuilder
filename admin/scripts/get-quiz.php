@@ -1,9 +1,12 @@
 <?php
 
 	include( 'conn.php' );
-	
-	$sql = mysql_query("SELECT * FROM quizes ORDER BY id DESC") or die(mysql_error());
-	$num_rows = mysql_num_rows($sql);
+    global $mysqli;
+    $sql = "SELECT * FROM quizes ORDER BY id DESC";
+
+    $query = $mysqli->query($sql) or die(mysqli_connect_error());
+
+    $num_rows = $query->num_rows;
 	
 	if($num_rows >= 1)
 	{
@@ -17,7 +20,7 @@
 					</tr>
 				</thead>
 				<tbody>';
-	while($row = mysql_fetch_array($sql))
+    while($row = $query->fetch_array(MYSQLI_ASSOC))
 	{
 		extract($row);
 		

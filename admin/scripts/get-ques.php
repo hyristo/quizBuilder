@@ -1,14 +1,18 @@
 <script type="text/javascript" src="js/get-quiz.js"></script>
 <?php
 	include('connection.php');
-	
+global $mysqli;
 	if($_POST)
 	{
 		$getid = $_POST['trackid'];
-		$sql = mysql_query("SELECT * FROM questions WHERE connection_meta = '$getid'") or die(mysql_error());
-		
-		$get_ques = mysql_query("SELECT * FROM quizes WHERE id = '$getid'") or die(mysql_error());
-		$ques_row = mysql_fetch_array($get_ques);
+
+        $sql_questions = "SELECT * FROM questions WHERE connection_meta = '$getid'";
+        $query_questions = $mysqli->query($sql_questions) or die(mysqli_connect_error());
+
+		$sql_quiz = "SELECT * FROM quizes WHERE id = '$getid'";
+        $query_quiz = $mysqli->query($sql_quiz) or die(mysqli_connect_error());
+
+		$ques_row = $query_quiz->fetch_array(MYSQLI_ASSOC);
 		
 		extract($ques_row);
 		
@@ -23,12 +27,12 @@
 				<span class="edit_question"><img src="images/pencil.png" width="12" height="12" alt="Edit" /></span></th>
 			  </tr></thead><tbody>';
 		
-		while($row = mysql_fetch_array($sql))
+		while($row = $query_questions->fetch_array(MYSQLI_ASSOC))
 		{
 			extract($row);
 			echo '<tr>
-				<td><b>Ques:- </b>'.  htmlspecialchars($question).'</td>
-				<td><b>Ans:- </b>'.htmlspecialchars($answer).'</td>
+				<td><b>Domanda:- </b>'.  htmlspecialchars(utf8_decode($question)).'</td>
+				<td><b>Risposta:- </b>'.htmlspecialchars(utf8_decode($answer)).'</td>
 				<td><span class="ques_edit"><input type="hidden" id="quesid" value="'.$id.'" /><img src="images/doc_edit.png" width="12" height="12" id="indques"/></span>
 				<span class="ques_delete"><input type="hidden" id="hiddendelete" value="'.$id.'" /><img src="images/delete.png" width="12" height="12" id="quesdelete"/></span></td>
 			</tr>';

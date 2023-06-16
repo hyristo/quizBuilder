@@ -7,6 +7,10 @@
 	$db_user = DB_USER;
 	$db_name = DB_NAME;
 
-	$encrypted_conn = mysql_connect($db_host,$db_user,$db_pass) or die(mysql_error());
-	mysql_select_db($db_name,$encrypted_conn) or die(mysql_error());
+$mysqli = new mysqli($db_host,$db_user,$db_pass,$db_name);
+//$encrypted_conn = mysqli_connect($db_host,$db_user,$db_pass,$db_name) or die(mysqli_connect_error());
+
+//mysqli_select_db($encrypted_conn,$db_name) or die(mysqli_error($encrypted_conn));
+
+global $mysqli;
 ?>

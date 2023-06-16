@@ -41,15 +41,23 @@ $(function(){
 			{
 				$('li.selected').addClass('success').removeClass('selected');
 				$('#submiterrors').html('Risposta esatta.');
+                                
+                                // inserire mp3
+                                $.playSound("suoni/applauso.mp3");
                                 esatto++;
 				y++;
 				result = y * 100 / count;
 				$('.meter span').css('width', + result + '%');
+                                $('#submiterrors').removeClass('hidden');
+                                $('#submiterrors').addClass('animated zoomIn');
 			}
 			else
 			{
 				$('li.selected').addClass('error').removeClass('selected');
-				$('#submiterrors').html('La risposta corretta &egrave; : ' + answer);
+				$('#submiterrors').html('<span class="red">Risposta errata.</span><br />La risposta corretta &egrave; : <span class="green">' + answer +'</span>');
+                                $.playSound("suoni/rispostasbagliata.mp3");
+                                $('#submiterrors').removeClass('hidden');
+                                $('#submiterrors').addClass('animated zoomIn');
                                 errato++;
 			}
 			$(this).hide();
@@ -65,6 +73,8 @@ $(function(){
 		else
 		{
 			$('#submiterrors').html('Scegliere un opzione per proseguire');
+                        $('#submiterrors').removeClass('hidden');
+                        $('#submiterrors').addClass('animated zoomIn');
 		}
 		
 		

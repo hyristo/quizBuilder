@@ -1,6 +1,6 @@
 <?php
 	include('connection.php');
-	
+global $mysqli;
 	if($_POST)
 	{
 		$sendtype = $_POST['sendtype'];
@@ -8,12 +8,12 @@
 		
 		if($sendtype == 'quiz')
 		{
-			$deletequiz = mysql_query("DELETE FROM quizes WHERE id = '$senddelete' LIMIT 1") or die(mysql_error());
-			$num_rows = mysql_affected_rows();
+			$deletequiz = $mysqli->query("DELETE FROM quizes WHERE id = '$senddelete' LIMIT 1") or die(mysqli_connect_error());
+			$num_rows = $mysqli->affected_rows;
 			
 			if($num_rows == 1)
 			{
-				$deleteques = mysql_query("DELETE FROM questions WHERE connection_meta = '$senddelete'") or die(mysql_error());
+				$deleteques = $mysqli->query("DELETE FROM questions WHERE connection_meta = '$senddelete'") or die(mysqli_connect_error());
 				
 				if($deleteques)
 				{
@@ -27,8 +27,8 @@
 		}
 		elseif($sendtype == 'question')
 		{
-			$deleteques = mysql_query("DELETE FROM questions WHERE id = '$senddelete'") or die(mysql_error());
-			$num_rows = mysql_affected_rows();
+			$deleteques = $mysqli->query("DELETE FROM questions WHERE id = '$senddelete'") or die(mysqli_connect_error());
+			$num_rows = $mysqli->affected_rows;
 			if($num_rows == 1)
 			{
 				echo 'Deleted Successfully';

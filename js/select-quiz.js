@@ -1,6 +1,8 @@
+
+
 $(function(){
 	
-	// selecting quiz to start
+       // selecting quiz to start
 	
 	$('#ui_element li').live("click",function(){
 		$('#ui_element li a').addClass('quiz_default_to_start').removeClass('quiz_selected_to_start');
@@ -10,8 +12,10 @@ $(function(){
 	
 	
 	$('#startquiz').click(function(){
+                
 		if($('#ui_element li a').hasClass('quiz_selected_to_start'))
 		{
+                parteTempo();
 		var searchName = $('a.quiz_selected_to_start').parents('li').find('#quiztorun').val();
 		
 			if(window.XMLHttpRequest)
@@ -33,8 +37,10 @@ $(function(){
 					$('.meter').fadeIn();
 					$('#submit').show();
 					$('.initialcount').show();
+                                        
 				}
 			}
+                        
 			parameters = 'searchName=' + searchName;
 			xmlhttp.open('POST', 'scripts/get-question.php', true);
 			xmlhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
@@ -42,7 +48,10 @@ $(function(){
 			}
 		else
 		{
-			alert('Scegliere un argomento per continuare');
+                        $('#submiterrors').html('Scegliere un argomento per continuare');
+                        $('#submiterrors').removeClass('hidden');
+                        $('#submiterrors').addClass('animated zoomIn');
+			//alert('Scegliere un argomento per continuare');
 		}
 	});
 });

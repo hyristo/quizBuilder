@@ -1,6 +1,8 @@
 <?php
+
 	if(file_exists('../config.php')){}else{header("location: ../install.php");}
 	include_once( 'scripts/login-script.php' );
+
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html>
@@ -58,7 +60,7 @@
 	<body>
 		<div class="content">
 			<h1>Quiz Admin</h1>
-			<div id="fake"> </div> 
+			<div id="fake"> </div>
 
 <?php if(isset($error))	
 	{
